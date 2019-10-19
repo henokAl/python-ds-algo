@@ -28,7 +28,7 @@ class Trie(object):
             return True
         return False
 
-    def searchPrefix(self, prefix):
+    def search_prefix(self, prefix):
         node = self.root
         for c in prefix:
             if node.children.get(c) is None:
@@ -40,7 +40,5 @@ class Trie(object):
 if __name__ == '__main__':
     t = Trie()
     t.insert("apple")
-    print(t.searchPrefix("app"))
+    print(t.search_prefix("app"))
     print(t.search("apl"))
-
-
